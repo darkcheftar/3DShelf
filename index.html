@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Events Section</title>
+</head>
+<body>
+    <div class="shelf">
+
+            <div class="book" style="--scale:1">
+                <div class="front"  style="--scale:1">front</div>
+                <!-- <div class="mid"  style="--scale:1">midcover</div> -->
+                <div class="back" style="--scale:1" >back</div>
+                
+            </div>
+
+    <div class="book" style="--scale:0.5">
+        <div class="front" style="--scale:0.5">front</div>
+        <!-- <div class="mid" style="--scale:0.5">midcover</div> -->
+        <div class="back" style="--scale:0.5">back</div>
+    </div><div class="book" style="--scale:1">
+        <div class="front"  style="--scale:1">front</div>
+        <!-- <div class="mid"  style="--scale:1">midcover</div> -->
+        <div class="back" style="--scale:1" >back</div>
+    </div>
+    <div class="book" style="--scale:0.5">
+        <div class="front" style="--scale:0.5">front</div>
+        <!-- <div class="mid" style="--scale:0.5">midcover</div> -->
+        <div class="back" style="--scale:0.5">back</div>
+    </div><div class="book" style="--scale:1">
+        <div class="front"  style="--scale:1">front</div>
+        <!-- <div class="mid"  style="--scale:1">midcover</div> -->
+        <div class="back" style="--scale:1" >back</div>
+    </div>
+    <div class="book" style="--scale:0.5">
+        <div class="front" style="--scale:0.5">front</div>
+        <!-- <div class="mid" style="--scale:0.5">midcover</div> -->
+        <div class="back" style="--scale:0.5">back</div>
+    </div>
+</div>
+<script>
+    let books=document.getElementsByClassName('book');
+    let fronts = document.getElementsByClassName('front');
+    let backs = document.getElementsByClassName('back');
+    let arr = [...Array(books.length).keys()].map(i=>[books[i],fronts[i], backs[i]])
+
+    for(let [b,f,ba] of arr){
+        let m = 0.3+Math.random()
+        b.style.setProperty('--scale',m);
+        f.style.setProperty('--scale',m);
+        ba.style.setProperty('--scale',m);
+    }
+
+</script>
+</body>
+</html>
